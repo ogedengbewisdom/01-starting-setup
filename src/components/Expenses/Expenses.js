@@ -5,8 +5,6 @@ import { useState } from "react"
 import ExpensesList from "./ExpensesList"
 import ExpensesChart from "./ExpensesChar"
 
-
-
 const Expenses = (props) => {
     
     const [fitleredYear, setFilteredYear] = useState("2020")
@@ -18,8 +16,6 @@ const Expenses = (props) => {
 
     const filteredYearExpenses = props.items.filter(expense => expense.date.getFullYear().toString() === fitleredYear)
 
-    
-
     return (
         <Card className="expenses">
             <ExpensesFilter selected={fitleredYear} onChangeFilter={filterChangeHandler} />
@@ -28,5 +24,4 @@ const Expenses = (props) => {
         </Card>
     )
 }
-
 export default Expenses
